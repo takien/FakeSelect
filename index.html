@@ -5,6 +5,45 @@
 	<title>Fake Select / Convert SELECT element into Bootstrap button dropdown</title>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	
+	<style>
+	
+	/* demo only*/
+	.quick-links {
+	  min-height: 30px;
+	  margin: 0;
+	  padding: 5px 20px;
+	  list-style: none;
+	  text-align: center;
+	  overflow: hidden;
+	}
+	.quick-links:first-child {
+	  min-height: 0;
+	}
+	.quick-links li {
+	  display: inline;
+	  margin: 0 8px;
+	  color: #999;
+	}
+	.quick-links .github-btn,
+	.quick-links .tweet-btn,
+	.quick-links .follow-btn,
+	.quick-links .gplus-btn,
+	.quick-links .fb-btn {
+	  position: relative;
+	  top: 5px;
+	}	
+	.links {
+		margin-top:20px;
+	}
+	.links a{
+		font-weight:bold;
+		font-size:1.1em;
+		color:#222
+	}
+	.links a.active{
+		text-decoration:none
+	}
+	</style>
 </head>
 <body>
 <div class="container">
@@ -182,6 +221,18 @@
 		<tr><td>btnSize </td><td>: </td>             <td>btn-xs | btn-sm | btn-lg </td></tr>
 		<tr><td>btnStyle</td><td>: btn-default </td> <td>btn-default | btn-warning | btn-success | btn-danger | btn-primary</td></tr>
 		</table>
+		
+		 <ul class="quick-links">
+		<li class="fb-btn">
+		<fb:like layout="button_count" send="false" href="http://takien.github.io/FakeSelect/"></fb:like>
+		</li>
+		  <li class="tweet-btn">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://takien.github.io/FakeSelect/" data-count="horizontal" data-via="cektkp">Tweet</a>
+		  </li>
+		  <li class="gplus-btn">
+			<g:plusone url="http://takien.github.io/FakeSelect/" size="medium"></g:plusone>
+		   </li>
+		</ul>
 </div>
 <footer style="padding:50px 0;text-align:center">
 	<div class="container">
@@ -195,6 +246,24 @@
 	jQuery(document).ready(function($) {
 		$('.fake-select').fakeSelect();
 	});
+</script>
+
+<!-- social links-->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=394280927787";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
 </script>
 </body>
 </html>
