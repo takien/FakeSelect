@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fake Select / Convert SELECT element into Bootstrap button dropdown</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	
+</head>
+<body>
+<div class="container">
+		<h1>Fake Select</h1>
+		<p>Turn SELECT element into Bootstrap button dropdown</p>
+		
+		<h3>Demo</h3>
+		<p>This will change this <select title="Test fake select" name="select0">
+				<option>Please select</option>
+				<option value="1">Lorem</option>
+				<option value="2">ipsum</option>
+				<option value="3">dolor</option>
+				<option value="4">sit</option>
+				<option value="5">amet</option>
+				<option value="6">Lorem ipsum</option>
+				<option value="7">Lorem ipsum dolor</option>
+				<option value="8">Lorem ipsum dolor sit</option>
+				<option value="9">lorem</option>
+				<option value="10">ipsum</option>
+			</select>
+			
+			into this: 
+			<select class="fake-select" title="Test fake select">
+				<option>Please select</option>
+				<option value="1">Lorem</option>
+				<option value="2">ipsum</option>
+				<option value="3">dolor</option>
+				<option value="4">sit</option>
+				<option value="5">amet</option>
+				<option value="6">Lorem ipsum</option>
+				<option value="7">Lorem ipsum dolor</option>
+				<option value="8">Lorem ipsum dolor sit</option>
+				<option value="9">lorem</option>
+				<option value="10">ipsum</option>
+			</select>
+			or 
+			<select class="fake-select" title="Test fake select" data-btn-style="btn-primary" data-btn-size="btn-xs">
+				<option>Please select</option>
+				<option value="1">Lorem</option>
+				<option value="2">ipsum</option>
+				<option value="3">dolor</option>
+				<option value="4">sit</option>
+				<option value="5">amet</option>
+				<option value="6">Lorem ipsum</option>
+				<option value="7">Lorem ipsum dolor</option>
+				<option value="8">Lorem ipsum dolor sit</option>
+				<option value="9">lorem</option>
+				<option value="10">ipsum</option>
+			</select>
+			or 
+			<select class="fake-select" title="Test fake select" data-btn-style="btn-success" data-btn-size="btn-sm">
+				<option>Please select</option>
+				<option value="1">Lorem</option>
+				<option value="2">ipsum</option>
+				<option value="3">dolor</option>
+				<option value="4">sit</option>
+				<option value="5">amet</option>
+				<option value="6">Lorem ipsum</option>
+				<option value="7">Lorem ipsum dolor</option>
+				<option value="8">Lorem ipsum dolor sit</option>
+				<option value="9">lorem</option>
+				<option value="10">ipsum</option>
+			</select>
+			or 
+			<select class="fake-select" title="Test fake select" data-btn-style="btn-info" data-btn-size="">
+				<option>Please select</option>
+				<option value="1">Lorem</option>
+				<option value="2">ipsum</option>
+				<option value="3">dolor</option>
+				<option value="4">sit</option>
+				<option value="5">amet</option>
+				<option value="6">Lorem ipsum</option>
+				<option value="7">Lorem ipsum dolor</option>
+				<option value="8">Lorem ipsum dolor sit</option>
+				<option value="9">lorem</option>
+				<option value="10">ipsum</option>
+			</select>
+			or 
+			<select class="fake-select" title="Test fake select" data-btn-style="btn-warning" data-btn-size="btn-lg">
+				<option>Please select</option>
+				<option value="1">Lorem</option>
+				<option value="2">ipsum</option>
+				<option value="3">dolor</option>
+				<option value="4">sit</option>
+				<option value="5">amet</option>
+				<option value="6">Lorem ipsum</option>
+				<option value="7">Lorem ipsum dolor</option>
+				<option value="8">Lorem ipsum dolor sit</option>
+				<option value="9">lorem</option>
+				<option value="10">ipsum</option>
+			</select>
+			or 
+			<select class="fake-select" title="Test fake select" data-btn-style="btn-danger" data-btn-size="btn-lg">
+				<option>Please select</option>
+				<option value="1">Lorem</option>
+				<option value="2">ipsum</option>
+				<option value="3">dolor</option>
+				<option value="4">sit</option>
+				<option value="5">amet</option>
+				<option value="6">Lorem ipsum</option>
+				<option value="7">Lorem ipsum dolor</option>
+				<option value="8">Lorem ipsum dolor sit</option>
+				<option value="9">lorem</option>
+				<option value="10">ipsum</option>
+			</select>
+		</p>
+		
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a target="_blank" href="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js">jQuery</a></li>
+			<li><a target="_blank" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">Bootstrap.js</a></li>
+			<li><a target="_blank" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">Bootstrap.css</a></li>
+		</ul>
+		
+		<h3>How to use</h3>
+		<h4>1. Include the script</h4>
+		<pre>&lt;script src="js/fake-select.js"&gt;&lt;/script&gt;</pre>
+		<pre>
+&lt;script&gt;
+	jQuery(document).ready(function($) {
+		$('.fake-select').fakeSelect();
+	});
+&lt;script&gt;
+		</pre>
+		<h4>2. Add class to your SELECT</h4>
+		
+		<p>This is optional, depends on your selector on step 1, if you use 'select' as your selector, you don't need to add this class.</p>
+		<p>
+		<pre>
+&lt;select class=&quot;fake-select&quot; title=&quot;Test fake select&quot; name=&quot;select1&quot;&gt;
+	&lt;option&gt;Please select&lt;/option&gt;
+	&lt;option value=&quot;1&quot;&gt;Lorem&lt;/option&gt;
+	&lt;option value=&quot;2&quot;&gt;ipsum&lt;/option&gt;
+	&lt;option value=&quot;3&quot;&gt;dolor&lt;/option&gt;
+	&lt;option value=&quot;4&quot;&gt;sit&lt;/option&gt;
+	&lt;option value=&quot;5&quot;&gt;amet&lt;/option&gt;
+	&lt;option value=&quot;6&quot;&gt;Lorem ipsum&lt;/option&gt;
+	&lt;option value=&quot;7&quot;&gt;Lorem ipsum dolor&lt;/option&gt;
+	&lt;option value=&quot;8&quot;&gt;Lorem ipsum dolor sit&lt;/option&gt;
+	&lt;option value=&quot;9&quot;&gt;lorem&lt;/option&gt;
+	&lt;option value=&quot;10&quot;&gt;ipsum&lt;/option&gt;
+&lt;/select&gt;
+		</pre>
+		</p>
+		<h3>Options</h3>
+		<p>Options can be passed via function parameter or data attribute.</p>
+			
+		<h4>1. Set option via function parameter</h4>
+		
+<pre>
+&lt;script&gt;
+	jQuery(document).ready(function($) {
+		$('.fake-select').fakeSelect({
+			btnSize :'btn-sm',
+			btnStyle:'btn-danger'
+		});
+	});
+&lt;script&gt;
+		</pre>
+		
+		<h4>2. Set option via data-attribute</h4>
+		
+		<p>Setting option via data attribute will override default option and parameter option.</p>
+		<p>
+			<pre>
+&lt;select class=&quot;fake-select&quot; data-btn-size=&quot;btn-lg&quot; data-btn-style=&quot;btn-primary&quot;&gt;
+    //
+&lt;/select&gt;
+			</pre>
+		</p>
+		
+		
+		<table class="table">
+		<tr><th>Option </th><th>Default value</th><th>Possible value</th></tr>
+		<tr><td>btnSize </td><td>: </td>             <td>btn-xs | btn-sm | btn-lg </td></tr>
+		<tr><td>btnStyle</td><td>: btn-default </td> <td>btn-default | btn-warning | btn-success | btn-danger | btn-primary</td></tr>
+		</table>
+</div>
+<footer style="padding:50px 0;text-align:center">
+	<div class="container">
+		<p>Copyright &copy; 2014 - by <a href="http://takien.com" target="_blank">takien.com</a></p>
+	</div>
+</footer>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="js/fake-select.js"></script>
+<script>
+	jQuery(document).ready(function($) {
+		$('.fake-select').fakeSelect();
+	});
+</script>
+</body>
+</html>
