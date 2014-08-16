@@ -33,9 +33,10 @@
 			
 			select_mask.attr('title',(_select.attr('title') || ''));
 			select_mask.find('.dropdown-menu li a').each(function() {
-				$(this).click(function(){
+				$(this).click(function(e){
 					_select.val($(this).data('val')).change();
 					select_mask.find('.fake-selected').text($(this).text());
+					e.preventDefault();
 				});
 			});
 			_select.hide();
