@@ -16,7 +16,7 @@
 			
 		var _select = $(this),
 			 select_id     = (_select.attr('id') == undefined) ? 'fake-select-'+index : _select.attr('id'),
-			 selected_text = _select.find('option[value="'+_select.val()+'"]').text() || _select.find('option').first().text();
+			 selected_text = _select.find('option[value="'+_select.val()+'"]').text() || _select.find('option:selected' ).text();
 			 o = $.extend({}, o, _select.data());
 			
 		
@@ -36,6 +36,8 @@
 				$(this).click(function(e){
 					_select.val($(this).data('val')).change();
 					select_mask.find('.fake-selected').text($(this).text());
+          				_select.find('option').removeAttr('selected');
+        				_select.find('option[value="'+$(this).data('val')+'"]' ).attr('selected', 'selected');
 					e.preventDefault();
 				});
 			});
