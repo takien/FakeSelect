@@ -1,5 +1,5 @@
 /*!
- * fakeSelect v0.1
+ * fakeSelect v0.2
  *
  * Copyright 2014
  * http://takien.com
